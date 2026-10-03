@@ -1,0 +1,14 @@
+{
+  "name": "cc-package",
+  "version": "1.0.0",
+  "description": "Project is specifically Azure App Service + Node.js + auto-scaling simulation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
