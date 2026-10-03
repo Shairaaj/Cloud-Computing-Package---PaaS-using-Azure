@@ -4,7 +4,8 @@
   "description": "Project is specifically Azure App Service + Node.js + auto-scaling simulation.",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "echo \"No tests specified\""
   },
   "keywords": [],
   "author": "",
