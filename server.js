@@ -53,6 +53,25 @@ app.get("/api/info", (req, res) => {
   });
 });
 
+app.get("/load-test", (req, res) => {
+    let duration = parseInt(req.query.duration) || 10;
+
+    // Safety limit: maximum 60 seconds
+    duration = Math.min(Math.max(duration, 1), 60);
+
+    const start = Date.now();
+
+    while (Date.now() - start < duration * 1000) {
+        Math.sqrt(Math.random() * 1000000);
+    }
+
+    res.json({
+        status: "completed",
+        duration: duration,
+        timestamp: new Date().toISOString()
+    });
+});
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
